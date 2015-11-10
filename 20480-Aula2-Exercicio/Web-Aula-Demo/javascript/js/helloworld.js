@@ -1,0 +1,1 @@
+﻿console.debug("Conteúdo do arquivo Helloworld.js");

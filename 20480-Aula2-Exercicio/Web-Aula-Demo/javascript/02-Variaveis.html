@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Usando Variáveis</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <h1>Usando Variáveis</h1>
+    <p>Visualize o conteúdo através do console do navegador (f12)!</p>
+
+    <script>
+        // Criando variáveis
+        var x = 1;
+        var y = 5;
+        var z = x + y;
+        var texto = "O resultawdo de " + x + " + " + y + " = " + z;
+
+        console.debug(texto);
+        console.debug(" ****************** ");
+
+        /*
+        Tipo de Texto
+        */
+
+        var nome = "Rui";
+        var sobrenome = "Moraes";
+        var nomecompleto = nome + " " + sobrenome;
+        var texto = "A concatenação da variável nome: " + nome
+                + " + sobrenome:  " + sobrenome + " = " + nomecompleto;
+        console.debug(texto);
+        console.debug(" ***************** ");
+
+        /*
+        Boolean
+        */
+        var campeao = true;
+        var time = "";
+        if (campeao) {
+            time = "Atletico";
+        }
+        else {
+            time = "Parmeira";
+        }
+        console.debug(time);
+        console.debug(" ***************** ");
+
+        /*
+        ===
+        */
+        var numero1 = 1;
+        var numero2 = "1";
+        console.debug(numero1 == numero2);
+        console.debug(numero1 === numero2);
+        console.debug(" ***************** ");
+
+    </script>
+</body>
+</html>

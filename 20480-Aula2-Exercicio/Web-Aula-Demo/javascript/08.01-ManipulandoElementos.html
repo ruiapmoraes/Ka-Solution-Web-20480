@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Manipulando elementos HTML</title>
+	<meta charset="utf-8" />
+    <style>
+        .demoClass {
+            color:#c1a0a0;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var btn = document.createElement("button");
+        var textBtn = document.createTextNode("Clique Aqui");
+        btn.appendChild(textBtn);
+        document.body.appendChild(btn);
+
+        //adicioonando texto ao conteúdo
+        var h = document.createElement("H1");
+        var text = document.createTextNode("Manipulando elementos");
+
+        h.appendChild(text);
+        document.body.appendChild(h);
+
+        //Adicionando atributos
+        var att = document.createAttribute("class");
+        att.value = "demoClass";
+        h.setAttributeNode(att);
+
+    </script>
+
+</body>
+</html>

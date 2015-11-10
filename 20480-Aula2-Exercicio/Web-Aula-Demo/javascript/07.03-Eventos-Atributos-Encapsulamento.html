@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Evento no atributo - Encapsulamento
+    </title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <h1>Evento no atributo - Encapsulamento</h1>
+    <table id="minhaTabela">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Rui</td>
+                <td>
+                    <a href="#" class="edit">Editar</a> |
+                    <a href="#" class="del">Excluir</a>
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Ivi</td>
+                <td>
+                    <a href="#" class="edit">Editar</a> |
+                    <a href="#" class="del">Excluir</a>
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Clarinha</td>
+                <td>
+                    <a href="#" class="edit">Editar</a> |
+                    <a href="#" class="del">Excluir</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+
+        var edits = document.getElementsByClassName("edit");
+        for (var i = 0; i < edits.length; i++) {            
+                edits[i].onclick = EditarItem;
+            };        
+
+        var deletes = document.getElementsByClassName("del");
+        for (var i = 0; i < deletes.length; i++) {            
+                deletes[i].onclick = ExcluirItem;
+            };        
+
+        function EditarItem() {
+            alert("cliquei no item: " + this.parentElement.parentElement.rowIndex);
+        };
+
+        function ExcluirItem() {
+            minhaTabela.deleteRow(this.parentElement.parentElement.rowIndex);
+        }
+
+    </script>
+
+</body>
+</html>

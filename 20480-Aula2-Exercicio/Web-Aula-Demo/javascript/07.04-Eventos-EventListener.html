@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Evento no addEventListener
+    </title>
+    <meta charset="utf-8" />
+    <script>
+
+        function metodoExecutar() {
+            alert("cliquei na div output");
+        };
+
+        function metodoExecutar2() {
+            alert("cliquei na div output2");
+        };
+
+        function metodoExecutar3() {
+            alert("cliquei na div output3");
+        };
+
+        window.addEventListener("load", function () {
+            output.addEventListener("click", metodoExecutar, true);
+            output2.addEventListener("click", metodoExecutar2); // false é default
+            output3.addEventListener("click", metodoExecutar3); // false é default
+        })
+             
+
+    </script>
+    <style>
+        #output {
+            height:200px;
+            padding:50px;
+            background-color:red;
+        }
+        #output2 {
+            height:50px;
+            background-color:yellow;
+        }
+        #output3 {
+            height:50px;
+            background-color: green;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Evento no atributo - addEventListener</h1>
+    <div id="output">
+        clique aqui
+        <div id="output2">clique aqui</div>
+        <div id="output3">nçao clica aqui</div>
+    </div>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Loop - While</title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <h1>Loop - While</h1>
+    <div>
+        <label>Selecione o número.</label>
+        <select id="numeros">
+            <option>1</option>
+            <option>10</option>
+            <option>100</option>
+            <option>1000</option>
+        </select>
+        <button id="btnExecutarWhile">Executar While</button>
+        <button id="btnExecutarDo">Executar Do</button>
+        <div id="output"></div>
+    </div>
+    <script>
+
+        document.getElementById("btnExecutarWhile").onclick =
+            function ContadorWhile() {
+                var numeroAtual = 0;
+                var numeroFinal = document.getElementById("numeros").value;
+                var texto = "Via While <br />";
+                while (numeroAtual < numeroFinal) {
+                    texto += "número: "
+                        + numeroAtual + "<br />";
+                    document.getElementById("output").innerHTML = texto;
+
+                    numeroAtual++;
+                }
+            };
+
+        document.getElementById("btnExecutarDo").onclick =
+            function ContadorDo() {
+                var numeroAtual = 0;
+                var numeroFinal = document.getElementById("numeros").value;
+                var texto = "Via Do <br/>...";
+                do {
+                    texto += "número: "
+                        + numeroAtual + "<br />";
+                    document.getElementById("output").innerHTML = texto;
+                    numeroAtual++;
+                } while (numeroAtual < numeroFinal);
+            };
+
+        function ObterValor() {
+            var objeto = document.getElementById("numeros").value;
+            return objeto;
+        };
+    </script>
+</body>
+</html>

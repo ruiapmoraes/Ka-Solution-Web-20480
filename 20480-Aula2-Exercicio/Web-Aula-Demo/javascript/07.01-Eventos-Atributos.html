@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Evento no atributo</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <h1>Evento no atributo</h1>
+    <table id="minhaTabela">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Rui</td>
+                <td><a href="#" onclick="Edit(1)">Editar</a> | <a href="#" onclick="Excluir(this)">Excluir</a></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Ivi</td>
+                <td><a href="#" onclick="Edit(2)">Editar</a> | <a href="#" onclick="Excluir(this)">Excluir</a></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Clarinha</td>
+                <td><a href="#" onclick="Edit(3)">Editar</a> | <a href="#" onclick="Excluir(this)">Excluir</a></td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+
+        function Edit(id) {
+            alert("editar id = " + id + "\nNão implementado.");
+        };
+        function Excluir(obj) {
+            var index = obj.parentElement.parentElement.rowIndex;
+            minhaTabela.deleteRow(index);
+        };
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Usando Arrays</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <h1>Usando Arrays</h1>
+    <p>Visualize no console!</p>
+
+    <script>
+
+        var minhaArray = [];
+        var times = ["Gamba", "Ponte Preta", "São Caetano", "Bragantino"];
+        console.debug(times[0]);
+        console.debug(times[1]);
+        console.debug(times[2]);
+        console.debug(times[3]);
+
+        minhaArray.push("Batata"); // método push - adicionar elemento ao array
+        minhaArray.push("Salsicha");
+        minhaArray.push("vinagrete");
+
+        // console.debug(minhaArray);
+        function ImprimirArray(array) {
+            for (var i = 0; i < array.length; i++) {
+                var texto = "Valor do índice " + i + " = " + array[i];
+                console.log(texto);
+            }
+            //for (var i = 0; i < array.length; i++) {
+            //    //var texto = "Valor do índice " + i + " = " + array[i];
+            //    console.log(i);
+            //}
+            //alert('teste');
+        };
+
+        ImprimirArray(times);
+
+        (function ImprimirArray(array) {
+            for (var i = 0; i < array.length; i++) {
+                var texto = "Valor do índice " + i + " = " + array[i];
+                console.log(texto);
+            }
+        })(minhaArray);
+    </script>
+
+</body>
+</html>

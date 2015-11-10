@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Usando Tipos</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <h1>Usando Tipos</h1>
+    <p>Visualize o resultado no navegador (F12)!</p>
+    <script>
+        //Funções
+        function EscrevaNoDOM(objeto) {
+            //console.debug(objeto);
+            document.write(objeto + "<br />");
+        };
+
+        var EscrevaNoConsole = function (obj) {
+            console.debug(obj);
+        };
+
+        var texto = "Eu sou uma string"; // string
+        var numero = 123; // number
+        var flag = false; // boolean
+
+        EscrevaNoDOM(texto);
+        EscrevaNoDOM(numero);
+        EscrevaNoDOM(flag);
+
+        EscrevaNoConsole(texto);
+        EscrevaNoConsole(numero);
+        EscrevaNoConsole(flag);
+
+        function Alerta() {
+            alert("'Alerta'");
+        };
+
+        Alerta();
+
+        (function Alerta2() {
+            alert("Self-involked");
+        })();
+
+    </script>
+
+</body>
+</html>

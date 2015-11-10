@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Switch</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <h1>Switch</h1>
+    <div>
+        <label for="times">Selecione o time:</label>
+        <select id="times">
+            <option>Corinthians</option>
+            <option>São Paulo</option>
+            <option>Palmeiras</option>
+            <option>Santos</option>
+        </select>
+        <button id="btnExecutar" onclick="verificaTime()">Executar</button>
+    </div>
+    <div id="output">
+
+    </div>
+    <script>
+        function verificaTime() {
+            var time = document.getElementById("times").value;
+            var resposta = "Time não existe";
+            switch (time) {
+                case "Corinthians":
+                    resposta = "campeao";
+                    break;
+                case "São Paulo":
+                    resposta = "campeao do mundo";
+                    break;
+                case "Palmeiras":
+                    resposta = "campeao da risada";
+                    break;
+                case "Santos":
+                    resposta = "campeao do paulistinha";
+                    break;
+                default:
+
+            }
+            document.getElementById("output").innerHTML = resposta;
+        };
+    </script>
+</body>
+</html>
