@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Item 03 - Eventos</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <script src="../Scripts/jquery-2.1.4.js"></script>
+    <div>
+        <button>Evento Click</button>
+    </div>
+    <div>
+        <span>
+            Clique duas vezes
+        </span>
+    </div>
+    <div>
+        <label>
+            <input type="checkbox" />
+            Check
+        </label>
+    </div>
+
+    <script>
+        //eventos
+        $("button").bind("click", function () {
+            alert("Clicou no botão");
+        });
+
+        //$("button").unbind("click");
+
+        //dbClick
+        $("span").first().on("dblclick", function () {
+            alert("Clicou duas vezes no span");
+        });
+
+        $("input[type='checkbox']").click();
+
+        function chckar() {
+            //alert
+            if (this.checked) //$(this).prop('checked')
+            {
+                alert("Vocêdeu um checkin");
+            }
+            else {
+                alert("vo~cê deu um checkout");
+            }
+        }
+    </script>
+
+</body>
+</html>
