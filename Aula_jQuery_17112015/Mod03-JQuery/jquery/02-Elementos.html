@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Item 02 - Elementos </title>
+    <meta charset="utf-8" />
+    <style>
+        .warning {
+            background-color: #cfaaaa;
+            color: #ffffff;
+            font-size: 20px;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .success {
+            background-color: #00fbf3;
+            color: #000;
+            font-size: 20px;
+        }
+
+        .folgada {
+            padding: 30px;
+            margin-left: 30px;
+        }
+    </style>
+</head>
+<body>
+    <hgroup>
+        <h1>Elementos Jquery</h1>
+        <h2>Demos</h2>
+    </hgroup>
+    <script src="../Scripts/jquery-2.1.4.js"></script>
+    <script>
+        $(function () {
+            $("h3").each(function (i, e) {
+                console.log("Indice = " + i);
+                e.style.color = "red";
+            });
+        });
+    </script>
+
+    <h3>SubTitulo I</h3>
+    <h3>SubTitulo II</h3>
+    <h3>SubTitulo III</h3>
+    <p id="resumo">Parágrafo com o id resumo</p>
+    <p class="cinza">P com classe cinza</p>
+    <p class="cinza">P II com classe cinza</p>
+    <p>Quarto parágrafo</p>
+
+    <p class="foo">P com Foo</p>
+    <span class="foo">Span com foo</span>
+
+    <div>Uma div qualquer</div>
+
+    <nav>
+        <ol>
+            <li>Item I</li>
+            <li>Item II</li>
+            <li>Item III</li>
+            <li>Item IV</li>
+            <li>Item V</li>
+            <li>Item VI</li>
+        </ol>
+    </nav>
+    <div></div>
+
+    <div class="folgada">
+        <input type="text" value="texto qualquer.." />
+        <input type="number" value="100" />
+        <input type="date" value="01/01/2011" />
+    </div>
+
+    <!-- <script>
+        FormatarH3();
+    </script>-->
+
+    <script>
+        //Como selecionar elementos
+        $("h3").css("background-color", "#c0c0c0"); // todos os elementos H3
+        $("p.cinza").css({
+            "font-size": "18px",
+            "background-color": "808080",
+            "border": "solid 2px #000",
+            "color": "#FFF"
+        }); // multiplos
+
+        $("resumo").css("color", "red").css("border", "dashed 3px green");
+        var $p4 = $("p").eq(3);
+        $p4.append("<strong>... texto add .. </strong>");
+
+        $("p").filter($(".foo")).append("... adicionando também ao foo");
+
+        // Length js
+        var tot_li = $("li").size(); // total de itens li
+        //$(div$output)
+        $("nav").next().append("Total de lis: " + tot_li)
+                .addClass("success");
+
+        //Exercício
+        //$("div").addClass("warning");
+        //$("div").first().addClass("warning").append(" ... primeiro DIV!");
+        //$("div").first().addClass("warning");
+        $("div").first().addClass("warning").append("... primeiro div que encontrar");
+
+        //todos os inputs
+        $("input").css("background-color", "#CCFF00");
+        $("input[type='text']").css("color", "#FF0000");
+
+    </script>
+    
+</body>
+</html>
