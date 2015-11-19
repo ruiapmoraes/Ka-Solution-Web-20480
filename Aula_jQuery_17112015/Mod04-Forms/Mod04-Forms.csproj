@@ -75,7 +75,14 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="03.01-AtributosHTML5-autocomplete.html" />
+    <Content Include="03.02-AtributosHTML5-autofocus.html" />
+    <Content Include="03.03-AtributosHtml5-required.html" />
+    <Content Include="03.04-AtributosHTML5-pattern.html" />
+    <Content Include="03.06-AtributosHtml5-MinMax.html" />
+    <Content Include="03.05-AtributosHtml5-placeholder.html" />
     <Content Include="01-FormSimples.html" />
+    <Content Include="02-OptGroup.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
