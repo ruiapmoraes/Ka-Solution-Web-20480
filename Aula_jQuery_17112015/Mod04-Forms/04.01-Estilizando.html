@@ -12,13 +12,23 @@
             min-width:200px;
             text-align:right;
         }
+        input[type="text"],[type="password"]{
+            min-width:200px;
+        }
+        input[type="text"]:valid {
+            border: 2px dashed #808080;
+        }
+        input[type="text"]:invalid {
+            border: 2px dashed red;
+        }
     </style>
 </head>
 <body>
-    <form method="post" action="teste.aspx">
+    <form method="post" action="02-OptGroup.html">
         <div>
             <label>Usuário: </label>
-            <input type="text" id="user" autocomplete="off" autofocus required value="" />
+            <input type="text" id="usuarioId"
+                   name="user" required autocomplete="off" autofocus />
         </div>
         <div>
             <label>Senha: </label>
@@ -26,6 +36,5 @@
         </div>
         <input type="submit" value="Acessar" />
     </form>
-
 </body>
 </html>

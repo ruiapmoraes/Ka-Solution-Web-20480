@@ -17,8 +17,11 @@
 <body>
     <form method="post" action="teste.aspx">
         <div>
-            <label>Usuário: </label>
-            <input type="text" id="user" value="" />
+            <input type="number" autocomplete="on"
+                    min="-10"
+                   max="10"
+                   placeholder="Informe um número" value="" />
+            (-10 à 10)
         </div>
         <div>
             <label>Senha: </label>

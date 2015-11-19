@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Verificando Submit</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <form onsubmit="return validarTime();">
+        Selecione o time campeão: 
+        <select name="times" id="times">
+            <optgroup label="São Paulo">
+                <option>Corinthians</option>
+                <option>Santos</option>
+                <option>São Paulo</option>
+                <option>Palmeiras</option>
+                <option>Portuguesa</option>
+            </optgroup>
+            <optgroup label="Rio de Janeiro">
+                <option>Flamengo</option>
+                <option>Botafogo</option>
+                <option>Vasco</option>
+                <option>Fluminense</option>
+            </optgroup>
+            <optgroup label="Belém">
+                <option>Paissandu</option>
+            </optgroup>
+            <optgroup label="Amazonas">
+                <option>Nacional</option>
+            </optgroup>
+        </select>
+        <input type="submit" value="Enviar" />
+    </form>
+    <script>
+        times.onchange = function () {
+            alert("Trocou para: " + this.value);
+            campeao = $("option").value;
+        };
+
+        function validarTime() {
+            if (times.value != "São Paulo") {
+                alert("Time errado");
+                return false;
+            }
+            return true;
+        };
+    </script>
+</body>
+</html>
